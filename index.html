@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chronos - Precision Age & Chronological Life Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="calculator-container">
+    <header class="app-header">
+      <div class="logo-mark">?</div>
+      <h1>Chronos Age Calculator</h1>
+      <p>Precision chronological age computation & life milestone telemetry</p>
+    </header>
+
+    <div class="input-card">
+      <label for="birthDateInput" class="input-label">Enter Date of Birth</label>
+      <div class="input-row">
+        <input type="date" id="birthDateInput" required>
+        <button id="calculateBtn" class="btn-calc">Calculate Age</button>
+      </div>
+      <div id="errorMessage" class="error-msg"></div>
+    </div>
+
+    <!-- Main Results Section -->
+    <div id="resultsWrapper" class="results-wrapper">
+      <div class="primary-results-grid">
+        <div class="result-tile">
+          <span class="tile-number" id="resYears">0</span>
+          <span class="tile-unit">Years</span>
+        </div>
+        <div class="result-tile">
+          <span class="tile-number" id="resMonths">0</span>
+          <span class="tile-unit">Months</span>
+        </div>
+        <div class="result-tile">
+          <span class="tile-number" id="resDays">0</span>
+          <span class="tile-unit">Days</span>
+        </div>
+      </div>
+
+      <!-- Quick Summary Banner -->
+      <div class="summary-banner">
+        <div class="summary-item">
+          <span class="summary-label">Born On</span>
+          <strong id="resDayOfWeek">-</strong>
+        </div>
+        <div class="summary-item">
+          <span class="summary-label">Zodiac Sign</span>
+          <strong id="resZodiac">-</strong>
+        </div>
+        <div class="summary-item">
+          <span class="summary-label">Next Birthday</span>
+          <strong id="resNextBdayCountdown">-</strong>
+        </div>
+      </div>
+
+      <!-- Lifetime Cumulative Statistics -->
+      <div class="analytics-card">
+        <h3>Cumulative Lifetime Statistics</h3>
+        <div class="analytics-grid">
+          <div class="metric-card">
+            <span class="metric-value" id="resTotalDays">0</span>
+            <span class="metric-label">Total Days Lived</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-value" id="resTotalWeeks">0</span>
+            <span class="metric-label">Total Weeks</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-value" id="resTotalHours">0</span>
+            <span class="metric-label">Total Hours</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-value" id="resTotalMinutes">0</span>
+            <span class="metric-label">Total Minutes</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
