@@ -25,10 +25,4 @@ age-calculator/
 ??? README.md         # Project documentation
 ```
 
----
 
-## ??? How to Run
-Simply open `index.html` in your browser:
-```powershell
-Start-Process "index.html"
-```
